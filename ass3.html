@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .picture {
+      display: inline-block;
+      position: relative;
+    }
+    
+    .picture img {
+      width: 300px;
+      height: 300px;
+      border: 3px solid black;
+    }
+    
+    .picture:hover::after {
+      content: "I am Image in Webpage";
+      position: absolute;
+      top: 30px;
+      left: 40px;
+      background-color: white;
+      padding: 5px;
+      border: 1px solid black;
+    }
+</style>
+<body>
+    <div class="picture">
+        <img src="WhatsApp Image 2023-06-21 at 11.11.45.jpg" alt="Image">
+      </div>
+</body>
+</html>
