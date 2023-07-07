@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        min-width: 160px;
+        z-index: 1;
+      }
+      
+      .dropdown-subcontent {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        min-width: 160px;
+        z-index: 1;
+      }
+      
+      .dropdown-content a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: #341212;
+      }
+      
+      .dropdown-subcontent a {
+        background-color: #d5cdcd;
+      }
+      
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      
+      .dropdown-submenu:hover .dropdown-subcontent {
+        display: block;
+      }
+      
+      .dropbtn {
+        background-color: #1a301a;
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+      }
+      
+      .dropdown-content a:hover {
+        background-color: #ddd;
+      }
+      
+      .dropdown-subcontent a:hover {
+        background-color: #ccc;
+      }
+    </style>
+</head>
+<body>
+    <h1>Dropdown Menu</h1>
+    <div class="dropdown">
+        <button class="dropbtn">Home</button>
+        <div class="dropdown-content">
+          <a href="#">Profile</a>
+          <a href="#">Name</a>
+          <div class="dropdown-submenu">
+            <a href="#">More</a>
+            <div class="dropdown-subcontent">
+              <a href="#">Contact us</a>
+              <a href="#">Phone Number</a>
+              <a href="#">Email</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="dropdown">
+        <button class="dropbtn">About</button>
+        <div class="dropdown-content">
+          <a href="#">Area</a>
+          <a href="#">Feedback</a>
+        </div>
+      </div>
+</body>
+</html>

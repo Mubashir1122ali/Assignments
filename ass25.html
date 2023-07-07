@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #content {
+          display: none;
+          padding: 10px;
+          background-color: #f2f2f2;
+          border: 1px solid #ccc;
+        }
+      </style>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h2>Slide Down Content</h2>
+  <button id="slideButton">Slide Down</button>
+  <div id="content">
+    <p>This is the hidden content that will slide down when the button is clicked.</p>
+  </div>
+
+  <script>
+    $(document).ready(function() {
+      $("#slideButton").click(function() {
+        $("#content").slideDown();
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="greeting"></h1>
+  <script>
+    var currentTime = new Date();
+    var currentHour = currentTime.getHours();
+    var greetingElement = document.getElementById("greeting");
+    var greetingMessage;
+    if (currentHour >= 0 && currentHour < 12) {
+      greetingMessage = "Good Morning.";
+    } else if (currentHour >= 12 && currentHour < 18) {
+      greetingMessage = "Good Evening.";
+    } else {
+      greetingMessage = "Good Night.";
+    }
+    greetingElement.textContent = greetingMessage;
+  </script>
+</body>
+</html>

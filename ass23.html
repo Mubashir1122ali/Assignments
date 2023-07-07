@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+             margin-left: 600px;
+        }
+        .calculator {
+          width: 280px;
+          background-color: #dad0d0;
+          border: 1px solid #389090;
+          border-radius: 8px;
+          padding: 10px;
+          margin: 0 auto;
+        }
+    
+        .calculator input {
+          width: 100%;
+          box-sizing: border-box;
+          margin-bottom: 10px;
+          padding: 10px;
+          border: 2px solid #0f0d0d;
+          border-radius: 4px;
+          font-size: 16px;
+        }
+    
+        .calculator button {
+          width: 50%;
+          padding: 10px;
+          margin: 5px;
+          border: none;
+          border-radius: 4px;
+          font-size: 16px;
+          cursor: pointer;
+        }
+    
+        .calculator .row {
+          display: flex;
+        }
+      </style>
+</head>
+<body>
+    <h1>Claculator</h1>
+    <div class="calculator">
+        <input type="text" id="num1" placeholder="Enter number 1" /><br>
+        <input type="text" id="num2" placeholder="Enter number 2" /><br>
+        <div class="row">
+          <button onclick="calculate('add')">+</button>
+          <button onclick="calculate('subtract')">-</button>
+        </div>
+        <div class="row">
+          <button onclick="calculate('multiply')">*</button>
+          <button onclick="reset()">C</button>
+        </div>
+        <h3>Result: <span id="result"></span></h3>
+      </div>
+    
+      <script>
+        function calculate(operation) {
+          var num1 = parseFloat(document.getElementById("num1").value);
+          var num2 = parseFloat(document.getElementById("num2").value);
+          var result;
+          switch (operation) {
+            case "add":
+              result = num1 + num2;
+              break;
+            case "subtract":
+              result = num1 - num2;
+              break;
+            case "multiply":
+              result = num1 * num2;
+              break;
+            default:
+              result = "Invalid operation";
+          }
+          document.getElementById("result").textContent = result;
+        }
+    
+        function reset() {
+          document.getElementById("num1").value = "";
+          document.getElementById("num2").value = "";
+          document.getElementById("result").textContent = "";
+        }
+      </script>
+</body>
+</html>
